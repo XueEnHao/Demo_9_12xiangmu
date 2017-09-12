@@ -2,35 +2,77 @@
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent"
-    tools:context="com.jiyun.defaultuser0.demo_9_12xiangmu.ShouyeActivity">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    tools:context="com.example.administrator.zonghexm_demo.MainActivity">
 
-    <Button
-        android:layout_width="wrap_content"
+    <EditText
+        android:id="@+id/Ed_name"
+        android:layout_width="200dp"
         android:layout_height="wrap_content"
-        android:id="@+id/mbutton"
-        android:text="登陆"
-        android:layout_centerVertical="true"
-        android:layout_centerHorizontal="true" />
-
-    <Button
-        android:id="@+id/button"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
+        android:hint="请输入手机号或邮箱"
+        android:layout_alignParentTop="true"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
-        android:layout_below="@+id/mbutton"
-        android:layout_marginTop="71dp"
-        android:text="找回密码" />
-
+        android:layout_marginLeft="115dp"
+        android:layout_marginStart="115dp"
+        android:layout_marginTop="44dp" />
+    <EditText
+        android:id="@+id/Ed_pass"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:hint="请输入密码"
+        android:layout_below="@+id/Ed_name"
+        android:layout_alignLeft="@+id/Ed_name"
+        android:layout_alignStart="@+id/Ed_name" />
     <Button
-        android:id="@+id/button2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:id="@+id/btn_submit"
+        android:text="Submit"
+        android:layout_marginTop="159dp"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true" />
+
+    <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
+        android:id="@+id/im_qq"
+        android:src="@mipmap/qq"
+        android:layout_marginTop="268dp"
+        android:layout_alignParentTop="true"
+        android:layout_toLeftOf="@+id/Ed_pass"
+        android:layout_toStartOf="@+id/Ed_pass" />
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/im_weibo"
+        android:src="@mipmap/ic_launcher"
+        android:layout_marginTop="13dp"
+        android:layout_alignTop="@+id/im_qq"
         android:layout_alignParentRight="true"
-        android:layout_alignTop="@+id/button"
-        android:text="注册密码" />
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="32dp"
+        android:layout_marginEnd="32dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_zhao"
+        android:text="找回密码"
+        android:textSize="15sp"
+        android:layout_alignParentTop="true"
+        android:layout_alignLeft="@+id/im_qq"
+        android:layout_alignStart="@+id/im_qq"
+        android:layout_marginTop="388dp" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_zhu"
+        android:text="注册"
+        android:textSize="15sp"
+        android:layout_marginTop="388dp"
+        android:layout_alignRight="@+id/im_weibo"
+        android:layout_alignEnd="@+id/im_weibo" />
 
 </RelativeLayout>
