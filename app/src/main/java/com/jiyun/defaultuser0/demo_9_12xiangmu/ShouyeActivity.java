@@ -53,7 +53,7 @@ public class ShouyeActivity extends AppCompatActivity implements View.OnClickLis
 
     @Override
     public void onRequestPermissionsResult(int requestCode,
-                         String permissions[], int[] grantResults) {
+                 String permissions[], int[] grantResults) {
 
 
     }
