@@ -18,7 +18,8 @@
         </activity>
         <activity android:name=".ZhuceActivity" />
         <activity android:name=".Zhuce1Activity" />
-        <activity android:name=".ZhaohuiActivity"></activity>
+        <activity android:name=".ZhaohuiActivity" />
+        <activity android:name=".YindaoActivity"></activity>
     </application>
 
 </manifest>
