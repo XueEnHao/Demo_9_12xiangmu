@@ -10,6 +10,6 @@ public class YindaoActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yindao);
         //启动页
-
+        //啊实打实大苏打似的a
     }
 }
