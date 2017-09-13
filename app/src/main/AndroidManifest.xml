@@ -18,7 +18,7 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ShouyeActivity">
+        <activity android:name=".YindaoActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
@@ -60,6 +60,10 @@
                 <data android:scheme="tencent100424468" />
             </intent-filter>
         </activity>
+    <meta-data
+        android:name="UMENG_APPKEY"
+        android:value="561cae6ae0f55abd990035bf" >
+    </meta-data>
 
         <activity
             android:name="com.umeng.qq.tencent.AssistActivity"
@@ -70,12 +74,9 @@
         <activity android:name=".ZhuceActivity" />
         <activity android:name=".Zhuce1Activity" />
         <activity android:name=".ZhaohuiActivity" />
-        <activity android:name=".YindaoActivity"></activity>
+        <activity android:name=".ShouyeActivity"></activity>
 
     </application>
-    <meta-data
-        android:name="UMENG_APPKEY"
-        android:value="561cae6ae0f55abd990035bf" >
-    </meta-data>
+
 
 </manifest>

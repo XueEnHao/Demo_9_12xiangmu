@@ -7,8 +7,6 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.view.LayoutInflater;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 
 import com.jiyun.defaultuser0.demo_9_12xiangmu.MyAdepter.MyPagerAdepter;
 
@@ -27,7 +25,7 @@ public class YindaoActivity extends AppCompatActivity{
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_yindao);
         initView();
-        one = getSharedPreferences("one", YindaoActivity.MODE_PRIVATE);
+        one = getSharedPreferences("tow", YindaoActivity.MODE_PRIVATE);
 
         boolean name = one.getBoolean("name", true);
         if (name){

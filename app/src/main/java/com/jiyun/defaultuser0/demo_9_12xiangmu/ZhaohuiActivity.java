@@ -81,8 +81,6 @@ public class ZhaohuiActivity extends AppCompatActivity implements View.OnClickLi
             }
         }
 
-
-
         @Override
         public void afterTextChanged(Editable s) {
 
@@ -100,6 +98,7 @@ public class ZhaohuiActivity extends AppCompatActivity implements View.OnClickLi
         String   regEx  =  "^\\d{12}$";
         Pattern p   =   Pattern.compile(regEx);
         Matcher m   =   p.matcher(str);
+        boolean matches = m.matches();
         return   m.replaceAll("").trim();
     }
 
