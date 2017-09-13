@@ -100,6 +100,12 @@ public class ShouyeActivity extends AppCompatActivity implements View.OnClickLis
         im_weibo = (ImageView) findViewById(R.id.im_weibo);
         tv_zhao = (TextView) findViewById(R.id.tv_zhao);
         tv_zhu = (TextView) findViewById(R.id.tv_zhu);
+        tv_zhu.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                startActivity(new Intent(ShouyeActivity.this,ZhuceActivity.class));
+            }
+        });
 
         btn_submit.setOnClickListener(this);
     }

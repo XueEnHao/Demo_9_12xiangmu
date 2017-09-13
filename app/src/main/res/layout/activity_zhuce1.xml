@@ -1,9 +1,56 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
     tools:context="com.jiyun.defaultuser0.demo_9_12xiangmu.Zhuce1Activity">
 
-</android.support.constraint.ConstraintLayout>
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="#00f">
+        <ImageView
+            android:id="@+id/iv_fan"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/fan"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="25sp"
+            android:text="验证"
+            android:textColor="#fff"
+            android:layout_centerInParent="true"/>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <EditText
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:id="@+id/et_yan"
+            android:layout_gravity="center_vertical"
+            android:hint="验证码"/>
+        <Button
+            android:layout_margin="5dp"
+            android:id="@+id/btn_yan"
+            android:layout_width="wrap_content"
+            android:text="获取验证码"
+            android:background="@drawable/shapeint"
+            android:textColor="#fff"
+            android:layout_height="wrap_content" />
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_ti"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="提交"
+        android:textSize="25sp"
+        android:textColor="#fff"
+        android:background="#00f"/>
+</LinearLayout>
