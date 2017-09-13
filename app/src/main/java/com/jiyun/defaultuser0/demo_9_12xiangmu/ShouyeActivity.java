@@ -2,6 +2,7 @@ package com.jiyun.defaultuser0.demo_9_12xiangmu;
 
 import android.Manifest;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.v4.app.ActivityCompat;
@@ -102,12 +103,19 @@ public class ShouyeActivity extends AppCompatActivity implements View.OnClickLis
         tv_zhu = (TextView) findViewById(R.id.tv_zhu);
 
         btn_submit.setOnClickListener(this);
+        tv_zhao.setOnClickListener(this);
+        tv_zhu.setOnClickListener(this);
     }
 
     @Override
     public void onClick(View v) {
         switch (v.getId()) {
             case R.id.btn_submit:
+
+                SharedPreferences xnh = getSharedPreferences("xnh", 0);
+                String name = xnh.getString("name", "name");
+                String pass = xnh.getString("pass", "pass");
+                Toast.makeText(this, ""+name, Toast.LENGTH_SHORT).show();
 
                 break;
 
