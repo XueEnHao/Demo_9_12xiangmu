@@ -119,6 +119,7 @@ public class ShouyeActivity extends AppCompatActivity implements View.OnClickLis
             case R.id.btn_submit:
 
                 SharedPreferences xnh = getSharedPreferences("xnh", 0);
+
                 String name = xnh.getString("name", "name");
                 String pass = xnh.getString("pass", "pass");
                 Toast.makeText(this, ""+name, Toast.LENGTH_SHORT).show();

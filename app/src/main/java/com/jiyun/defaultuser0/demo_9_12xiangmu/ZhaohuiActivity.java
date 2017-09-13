@@ -124,6 +124,7 @@ public class ZhaohuiActivity extends AppCompatActivity implements View.OnClickLi
                 String pass = password.getText().toString();
                 SharedPreferences settings  = getSharedPreferences("xnh",0);
                 SharedPreferences.Editor edit = settings.edit();
+                edit.clear();
                 edit.putString("name",name);
                 edit.putString("pass",pass);
                 edit.commit();
