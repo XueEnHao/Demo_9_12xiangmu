@@ -122,9 +122,14 @@ public class ShouyeActivity extends AppCompatActivity implements View.OnClickLis
                 String name = xnh.getString("name", "name");
                 String pass = xnh.getString("pass", "pass");
                 Toast.makeText(this, ""+name, Toast.LENGTH_SHORT).show();
-
+                String trim = Ed_name.getText().toString().trim();
+                String trim1 = Ed_pass.getText().toString().trim();
+                if (trim.equals(name)&&trim1.equals(pass)) {
+                    Toast.makeText(this, "登陆成功", Toast.LENGTH_SHORT).show();
+                }else{
+                    Toast.makeText(this, "输入错误，请重新输入", Toast.LENGTH_SHORT).show();
+                }
                 break;
-
 
             case R.id.tv_zhao:
                 Intent intent=new Intent(ShouyeActivity.this,ZhaohuiActivity.class);
