@@ -1,6 +1,7 @@
 package com.jiyun.defaultuser0.demo_9_12xiangmu;
 
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.text.TextUtils;
@@ -16,6 +17,8 @@ public class ZhuceActivity extends AppCompatActivity implements View.OnClickList
     private EditText et_shou;
     private EditText et_mi;
     private Button btn_zhu;
+    private String shou;
+    private String mi;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -38,25 +41,36 @@ public class ZhuceActivity extends AppCompatActivity implements View.OnClickList
         switch (v.getId()) {
             case R.id.btn_zhu:
                 submit();
+
+                SharedPreferences xnh = getSharedPreferences("xnh", 0);
+                SharedPreferences.Editor edit = xnh.edit();
+                edit.clear();
+                String uesname = et_shou.getText().toString();
+                String password = et_mi.getText().toString();
+                edit.putString("name",uesname);
+                edit.putString("pass",password);
+                edit.commit();
+
                 break;
         }
     }
 
     private void submit() {
         // validate
-        String shou = et_shou.getText().toString().trim();
+        shou = et_shou.getText().toString().trim();
         if (TextUtils.isEmpty(shou)) {
             Toast.makeText(this, "请输入手机号", Toast.LENGTH_SHORT).show();
             return;
         }
 
-        String mi = et_mi.getText().toString().trim();
+        mi = et_mi.getText().toString().trim();
         if (TextUtils.isEmpty(mi)) {
             Toast.makeText(this, "请输入密码", Toast.LENGTH_SHORT).show();
             return;
         }
 
         // TODO validate success, do something
+
         startActivity(new Intent(ZhuceActivity.this,Zhuce1Activity.class));
 
     }
